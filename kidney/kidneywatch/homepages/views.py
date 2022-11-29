@@ -1,5 +1,7 @@
 from django.http import HttpResponse
 from django.shortcuts import render
+import requests
+import json
 
 # Create your views here.
 
@@ -14,3 +16,22 @@ def dashboardPageView(request):
 
 def testPageView(request):
     return render(request, 'test.html')
+
+def dataRender(request):
+    parameters = { 
+        "api_key": 'EPMl3IkB2Wb9GzdAbcfaaYkCCucSG7JQxbGUoWGK',
+        "query": 'Cheese',
+        "dataType": ["Foundation"]
+    }
+
+    response = requests.get("https://api.nal.usda.gov/fdc/v1/foods/search", params=parameters)
+
+    data = response.json()
+    foods=[]
+    for f in range(len(data['foods'])):
+        food = data["foods"][f]['description']
+        foods.append(food)
+    context = {
+        'foods':foods
+    }
+    return render(request, 'test.html', context)
