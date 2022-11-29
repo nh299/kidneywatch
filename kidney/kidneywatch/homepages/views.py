@@ -1,6 +1,6 @@
 # from django.http import HttpResponse
 from django.shortcuts import render
-import requests
+import pip._vendor.requests as requests
 import json
 
 # Create your views here.
@@ -120,7 +120,8 @@ def dataRender(request):
             context = {
                 'foods':food_dict,
                 'nutrients': nutrients,
-                'nutrientValues': nutrientValues
+                'nutrientValues': nutrientValues,
+                'list': nutrients
             }
             return render(request, 'test.html', context)
         else:
