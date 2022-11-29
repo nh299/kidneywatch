@@ -74,14 +74,14 @@ def typePageView(request):
         #return render(request, 'type.html')
 
 def dataRender(request):
-    #type = None
-    #if type != None:
+        foodType = None
+        foodType = request.POST.get('foodGroups')
         search = None
         search = request.POST.get('searchFood')
         parameters = { 
             "api_key": 'EPMl3IkB2Wb9GzdAbcfaaYkCCucSG7JQxbGUoWGK',
             "query": search,
-            "dataType": ["Foundation", "Branded"]
+            "dataType": [foodType]
         }
         if search != None:
             response = requests.get("https://api.nal.usda.gov/fdc/v1/foods/search", params=parameters)

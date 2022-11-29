@@ -1,7 +1,7 @@
 {% extends 'base.html' %}
 {% load static %}
 {% block content %}
-<form method="post" action="{% url 'type' %}">
+<form method="post" action="{% url 'test' %}">
     {% csrf_token %}
     <select name="foodGroups">
         <option value='none' selected disabled hidden>Select a Food Category</option>
