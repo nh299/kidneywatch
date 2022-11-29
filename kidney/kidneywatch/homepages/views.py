@@ -11,3 +11,6 @@ def infoPageView(request):
 
 def dashboardPageView(request):
     return render(request, 'dashboard.html')
+
+def testPageView(request):
+    return render(request, 'test.html')
