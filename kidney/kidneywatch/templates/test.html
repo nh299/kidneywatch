@@ -26,13 +26,17 @@
     <button name="addFood" value={{food_name}} type="submit">{{food_name}}</button><br>
     </form>
         {% for nutrient_name, amount_unit in nutrients.items %}
-        {{nutrient_name}}:
+        {{nutrient_name}}: 
         {% for value in amount_unit%}
         {{value}}
         {% endfor %}
         <br>
         {% endfor %}
         <br>
+        
+    
+    
+   
     {% endfor %}
 </ul>
 {% comment %} {%input("Enter cheese: ")%} {% endcomment %}
