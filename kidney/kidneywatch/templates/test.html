@@ -10,7 +10,7 @@
     </select>
 </form>
 <h3>Enter a food:</h3>
-<form class="d-none d-sm-inline-block form-inline mr-auto ml-md-3 my-2 my-md-0 mw-100 navbar-search" method="post" action="{% url 'test' %}"> 
+<form class="d-none d-sm-inline-block form-inline mr-auto ml-md-3 my-2 my-md-0 mw-100 navbar-search" method="post" action="{% url 'test' %}">
     {% csrf_token %}
     <input name="searchFood" type="text" class="form-control bg-light border-0 small" placeholder="Search for..."
     aria-label="Search" aria-describedby="basic-addon2" >
@@ -18,20 +18,19 @@
 </form>
 <br><br>
 <ul>
-    {% for i in foods %} <!-- loop through the foods -->
+    {% for food_name, nutrients in foods.items %} <!-- loop through the foods -->
     <form action="{%url 'test' %}">
-    <button name="addFood" value={{i}} type="submit">{{i}}</button><br><br>
+    <button name="addFood" value={{food_name}} type="submit">{{food_name}}</button><br>
     </form>
-    <p> 
-        {% for key, value in nutrientValues.items %}
-        {{key}}: {{ value }}
+        {% for nutrient_name, amount_unit in nutrients.items %}
+        {{nutrient_name}}:
+        {% for value in amount_unit%}
+        {{value}}
         {% endfor %}
-    </p>
-    
-    
-   
+        <br>
+        {% endfor %}
+        <br>
     {% endfor %}
-    
 </ul>
 {% comment %} {%input("Enter cheese: ")%} {% endcomment %}
 {% endblock %}
