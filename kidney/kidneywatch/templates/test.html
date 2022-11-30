@@ -1,4 +1,4 @@
-{% extends 'base.html' %}
+{% extends 'dashboardNav.html' %}
 {% load static %}
 {% block content %}
 <form method="post" action="{% url 'test' %}">
@@ -23,8 +23,9 @@
 <ul>
     {% for food_name, nutrients in foods.items %} <!-- loop through the foods -->
     <form action="{%url 'test' %}">
-    <button name="addFood" value={{food_name}} type="submit">{{food_name}}</button><br>
-    </form>
+    <h1>{{food_name}}</h1>
+    <br>
+    
         {% for nutrient_name, amount_unit in nutrients.items %}
         {{nutrient_name}}: 
         {% for value in amount_unit%}
@@ -33,11 +34,23 @@
         <br>
         {% endfor %}
         <br>
+    
+    {% for nutrient_name, amount_unit in nutrients.items %}
+    {% for value in amount_unit%}
+    {% if not value.isalpha %}
+        <input type='hidden' name="{{nutrient_name}}" value="{{value}}">
         
+        {% endif %}
+        {% endfor %}
+        {% endfor %}
+        <label>Quantity</label>
+    <input type='select'>
+        <option value="qt">qt</option>
+        <option value="g">g</option>
+    <button type='submit'>Add</button>
+        {% endfor %}
     
-    
-   
-    {% endfor %}
+    </form>
 </ul>
 {% comment %} {%input("Enter cheese: ")%} {% endcomment %}
 {% endblock %}
