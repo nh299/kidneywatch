@@ -126,6 +126,11 @@ def dataRender(request):
             return render(request, 'test.html', context)
         else:
             return render(request, 'test.html')
+
+def loginPageView(request):
+    return render(request, 'login.html')
+def registrationPageView(request):
+    return render(request, 'register.html')
     #else:
         #return render(request, 'test.html')
 # query = input("Enter your query: ")
