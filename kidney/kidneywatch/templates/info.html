@@ -8,7 +8,12 @@
                     <div class="col-xl-6">
                         <div class="text-center text-white">
                             <!-- Page heading-->
-                            <h1 class="mb-5">Learn More about Kidney Disease</h1>
+                            <h1 class="mb-1">Resources for Kidney Health</h1>
+                            <br>
+                            <h5> Many of the individuals who struggle with kidney disease also live with one or more comorbidities.
+                                 These comorbidities require different diets and habits to aid kidney health.</h5>
+                            <h5>Learn more below.</h5>
+
                             <!-- Signup form-->
                             <!-- * * * * * * * * * * * * * * *-->
                             <!-- * * SB Forms Contact Form * *-->
@@ -18,26 +23,10 @@
                             <!-- https://startbootstrap.com/solution/contact-forms-->
                             <!-- to get an API token!-->
                             <form class="form-subscribe" id="contactForm" data-sb-form-api-token="API_TOKEN">
-                                <!-- Email address input-->
-                                <div class="row">
-                                    <div class="col">
-                                        <input class="form-control form-control-lg" id="emailAddress" type="email" placeholder="Email Address" data-sb-validations="required,email" />
-                                        <div class="invalid-feedback text-white" data-sb-feedback="emailAddress:required">Email Address is required.</div>
-                                        <div class="invalid-feedback text-white" data-sb-feedback="emailAddress:email">Email Address Email is not valid.</div>
-                                    </div>
-                                    <div class="col-auto"><button class="btn btn-primary btn-lg disabled" id="submitButton" type="submit">Submit</button></div>
-                                </div>
                                 <!-- Submit success message-->
                                 <!---->
                                 <!-- This is what your users will see when the form-->
                                 <!-- has successfully submitted-->
-                                <div class="d-none" id="submitSuccessMessage">
-                                    <div class="text-center mb-3">
-                                        <div class="fw-bolder">Form submission successful!</div>
-                                        <p>To activate this form, sign up at</p>
-                                        <a class="text-white" href="https://startbootstrap.com/solution/contact-forms">https://startbootstrap.com/solution/contact-forms</a>
-                                    </div>
-                                </div>
                                 <!-- Submit error message-->
                                 <!---->
                                 <!-- This is what your users will see when there is-->
@@ -50,7 +39,7 @@
             </div>
         </header>
         <!-- Icons Grid-->
-        <section class="features-icons bg-light text-center">
+        {% comment %} <section class="features-icons bg-light text-center">
             <div class="container">
                 <div class="row">
                     <div class="col-lg-4">
@@ -76,63 +65,49 @@
                     </div>
                 </div>
             </div>
-        </section>
+        </section> {% endcomment %}
         <!-- Image Showcases-->
         <section class="showcase">
             <div class="container-fluid p-0">
                 <div class="row g-0">
-                    <div class="col-lg-6 order-lg-2 text-white showcase-img" style="background-image: url('assets/img/bg-showcase-1.jpg')"></div>
+                    <div class="col-lg-6 order-lg-2 text-white showcase-img" style="background-image: url('static/img/orange.jpg')"></div>
                     <div class="col-lg-6 order-lg-1 my-auto showcase-text">
-                        <h2>Fully Responsive Design</h2>
-                        <p class="lead mb-0">When you use a theme created by Start Bootstrap, you know that the theme will look great on any device, whether it's a phone, tablet, or desktop the page will behave responsively!</p>
+                        <h2>Diabetes</h2>
+                        <p class="lead mb-0">An effective diabetes diet will look like a healthy diet for anyone. Limiting salt and sodium is important 
+                            for those with diabetes and chronic kidney disease (CKD). In many cases reducing potassium, phosphorus, and protein is needed. To learn more about diabetes and CKD, visit these resources.</p>
+                        <br>
+                        <li class="list-inline-item"><a href="https://www.cdc.gov/diabetes/managing/eat-well/what-to-eat.html">CDC - Diabetes & Kidney Disease</a></li>
+                        <li class="list-inline-item"><a href="https://www.albertahealthservices.ca/assets/info/nutrition/if-nfs-healthy-eating-for-people-w-diabetes-and-kidney-disease.pdf">Alberta Health Services - Healthy Eating For Diabetes</a></li>
                     </div>
                 </div>
                 <div class="row g-0">
-                    <div class="col-lg-6 text-white showcase-img" style="background-image: url('assets/img/bg-showcase-2.jpg')"></div>
+                    <div class="col-lg-6 text-white showcase-img" style="background-image: url('static/img/hbp.jpg')"></div>
                     <div class="col-lg-6 my-auto showcase-text">
-                        <h2>Updated For Bootstrap 5</h2>
-                        <p class="lead mb-0">Newly improved, and full of great utility classes, Bootstrap 5 is leading the way in mobile responsive web development! All of the themes on Start Bootstrap are now using Bootstrap 5!</p>
+                        <h2>High Blood Pressure</h2>
+                        <p class="lead mb-0">Eating a healthy diet will lower your blood pressure. An effective diet for 
+                            individuals with high blood pressure and CKD is low in fat and cholesterol. Limiting foods 
+                            that are high in saturated fat as well as full-fat dairy foods will help with hypertension. 
+                            Eating fresh fruit and vegetables and whole grains will promote heart health. To learn more about high blood pressure and CKD, visit these resources. </p>
+                        <br>
+                        <li class="list-inline-item"><a href="https://www.cdc.gov/diabetes/managing/eat-well/what-to-eat.html">NIH - High Blood Pressure & Kidney Disease</a></li>
+                        <li class="list-inline-item"><a href="https://www.kidney.org/atoz/content/Dash_Diet">National Kidney Foundation - The DASH Diet</a></li>
                     </div>
                 </div>
                 <div class="row g-0">
-                    <div class="col-lg-6 order-lg-2 text-white showcase-img" style="background-image: url('assets/img/bg-showcase-3.jpg')"></div>
+                    <div class="col-lg-6 order-lg-2 text-white showcase-img" style="background-image: url('static/img/scale.jpg')"></div>
                     <div class="col-lg-6 order-lg-1 my-auto showcase-text">
-                        <h2>Easy to Use & Customize</h2>
-                        <p class="lead mb-0">Landing Page is just HTML and CSS with a splash of SCSS for users who demand some deeper customization options. Out of the box, just add your content and images, and your new landing page will be ready to go!</p>
+                        <h2>Obesity</h2>
+                        <p class="lead mb-0">Being overwight has a direct, and negative effect on your kidneys. A high body mass index is one of the strongest risk factors for developing CKD.
+                            An effective diet will focus on avoiding processed foods and meals with large amounts of salt and sugar. Focusing on eating lean-proteins and excersicing every day 
+                            will also dramatically help with obesity. To learn more about obesity and CKD, visit these resources.
+                        </p>
+                        <br>
+                        <li class="list-inline-item"><a href="https://www.kidneyfund.org/all-about-kidneys/risk-factors/obesity-and-chronic-kidney-disease">American Kidney Fund - Obesity & Chronic Kidney Disease</a></li>
+                        <li class="list-inline-item"><a href="https://www.freseniuskidneycare.com/thrive-central/losing-weight-kidney-disease">Fresenius Kidney Care - The Basics of Losing Weight with Kidney Disease</a></li>
                     </div>
                 </div>
             </div>
         </section>
-        <!-- Testimonials-->
-        <section class="testimonials text-center bg-light">
-            <div class="container">
-                <h2 class="mb-5">What people are saying...</h2>
-                <div class="row">
-                    <div class="col-lg-4">
-                        <div class="testimonial-item mx-auto mb-5 mb-lg-0">
-                            <img class="img-fluid rounded-circle mb-3" src="assets/img/testimonials-1.jpg" alt="..." />
-                            <h5>Margaret E.</h5>
-                            <p class="font-weight-light mb-0">"This is fantastic! Thanks so much guys!"</p>
-                        </div>
-                    </div>
-                    <div class="col-lg-4">
-                        <div class="testimonial-item mx-auto mb-5 mb-lg-0">
-                            <img class="img-fluid rounded-circle mb-3" src="assets/img/testimonials-2.jpg" alt="..." />
-                            <h5>Fred S.</h5>
-                            <p class="font-weight-light mb-0">"Bootstrap is amazing. I've been using it to create lots of super nice landing pages."</p>
-                        </div>
-                    </div>
-                    <div class="col-lg-4">
-                        <div class="testimonial-item mx-auto mb-5 mb-lg-0">
-                            <img class="img-fluid rounded-circle mb-3" src="assets/img/testimonials-3.jpg" alt="..." />
-                            <h5>Sarah W.</h5>
-                            <p class="font-weight-light mb-0">"Thanks so much for making these free resources available to us!"</p>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </section>
-        <!-- Call to Action-->
         <section class="call-to-action text-white text-center" id="signup">
             <div class="container position-relative">
                 <div class="row justify-content-center">
