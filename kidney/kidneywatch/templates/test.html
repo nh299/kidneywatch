@@ -1,4 +1,4 @@
-{% extends 'dashboardNav.html' %}
+{% extends 'base.html' %}
 {% load static %}
 {% block content %}
 <form method="post" action="{% url 'test' %}">
@@ -23,9 +23,8 @@
 <ul>
     {% for food_name, nutrients in foods.items %} <!-- loop through the foods -->
     <form action="{%url 'test' %}">
-    <h1>{{food_name}}</h1>
-    <br>
-    
+    <button name="addFood" value={{food_name}} type="submit">{{food_name}}</button><br>
+    </form>
         {% for nutrient_name, amount_unit in nutrients.items %}
         {{nutrient_name}}: 
         {% for value in amount_unit%}
@@ -59,5 +58,6 @@
     
     </form>
 </ul>
+{{chosen_food}}
 {% comment %} {%input("Enter cheese: ")%} {% endcomment %}
 {% endblock %}
